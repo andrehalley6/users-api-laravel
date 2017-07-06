@@ -19,3 +19,10 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+// mcoin API routes test
+Route::post('api/v1/users', 'UserController@create');
+Route::get('api/v1/users/{id}', 'UserController@getUser');
+Route::put('api/v1/users/{id}', 'UserController@updateUser');
+Route::delete('api/v1/users/{id}', 'UserController@deleteUser');
+Route::post('api/v1/authenticate', 'UserController@login');
